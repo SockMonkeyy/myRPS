@@ -200,7 +200,7 @@
                 (player == 'paper' && computer == 'rock')) {
 
                 playerScore += 1
-                result = `You win ${player} beats ${computer}!`
+                result = `Good Move! ${player} beats ${computer}!`
                 document.getElementById('playerScore').innerHTML = `You: ${playerScore}`
 
                 if (playerScore == 5) {
@@ -215,7 +215,7 @@
 
             else {
                 computerScore += 1
-                result = `You lose ${computer} beats ${player}`
+                result = `Oh No! ${computer} beats ${player}`
                 document.getElementById('computerScore').innerHTML = `Bot: ${computerScore}`
 
                 if (computerScore == 5) {
