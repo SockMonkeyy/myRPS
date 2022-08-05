@@ -98,6 +98,9 @@
         .offcanvas-title {
             padding-left: 25%;
         }
+        .hud{
+            font-size: 1rem;
+        }
     </style>
 </head>
 <nav class="navbar navbar-dark bg-dark text-center fixed-top">
@@ -136,9 +139,11 @@
 </nav>
 
 <body class="text-center">
-    <div class="h1 container main">First to 5 Wins!!!
-        <h1 class="pt-2" id="playerScore"></h1>
-        <h1 class="" id="computerScore"></h1>
+    <div class="h1 container main mb-3">First to 5 Wins!!!
+        <div class="row pt-4 hud">
+        <h3 class="pt-2 col" id="playerScore">You: 0</h3>
+        <h4 class="col" id="computerScore">Bot: 0</h4>
+    </div>
         <h1 class="gameText pt-2 pb-2" id="playerText">
             You:
         </h1>
@@ -199,7 +204,7 @@
                 document.getElementById('playerScore').innerHTML = `You: ${playerScore}`
 
                 if (playerScore == 5) {
-                    result = `You Won the Game!!! \n You: ${playerScore} vs. Bot: ${computerScore}`
+                    result = `You Won the Game!!! \n You: ${playerScore} \n Bot: ${computerScore}`
                     localStorage.setItem('result', result);
                     return window.location.assign("./endGame.html");
                 }
@@ -214,7 +219,7 @@
                 document.getElementById('computerScore').innerHTML = `Bot: ${computerScore}`
 
                 if (computerScore == 5) {
-                    result = `You Loss to a Bot!!! \n You: ${playerScore} vs. Bot: ${computerScore}`
+                    result = `You Loss to a Bot!!! \n Bot: ${computerScore }\n You: ${playerScore}`
                     localStorage.setItem('result', result);
                     return window.location.assign("./endGame.html");
 
