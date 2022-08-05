@@ -74,8 +74,8 @@
         .main {
             color: white;
             width: auto;
-            margin-top: 30%;
-            padding-top: 6rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
             padding-bottom: 6rem;
             border-radius: 5%;
             background-color: hsla(0, 0%, 0%, 0.432);
@@ -94,41 +94,46 @@
         .nav-link {
             color: #ffffff;
         }
+
+        .offcanvas-title {
+            padding-left: 25%;
+        }
     </style>
 </head>
 <nav class="navbar navbar-dark bg-dark text-center fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">RPS</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-        aria-controls="offcanvasDarkNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-        aria-labelledby="offcanvasDarkNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Wayne's World</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-            aria-label="Close"></button>
+        <a class="navbar-brand" href="#">RPS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Wayne's World</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://sockmonkeyy.github.io/jscraps/">Craps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://sockmonkeyy.github.io/basicquiz/">Basic Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://sockmonkeyy.github.io/QuickQuiz/">Web Dev Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="https://sockmonkeyy.github.io/jscraps/version1NumberGuessingGame.html">Number
+                            Guessing Game</a>
+                    </li>
+            </div>
         </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link" href="https://sockmonkeyy.github.io/jscraps/">Craps</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="https://sockmonkeyy.github.io/basicquiz/">Basic Quiz</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="https://sockmonkeyy.github.io/QuickQuiz/">Web Dev Quiz</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="https://sockmonkeyy.github.io/jscraps/version1NumberGuessingGame.html">Number
-                  Guessing Game</a>
-              </li>
-        </div>
-      </div>
     </div>
-  </nav>
+</nav>
 
 <body class="text-center">
     <div class="h1 container main">First to 5 Wins!!!
@@ -141,7 +146,7 @@
             Bot:
         </h1>
         <h1 class="gameText pb-4" id="result">
-           
+
         </h1>
 
         <div class="col">
@@ -167,9 +172,9 @@
 
         choiceBtn.forEach(button => button.addEventListener("click", () => {
             player = button.textContent;
-            
+
             playerText.textContent = `You: ${player}`;
-            
+
             resultText.textContent = checkWinner();
 
         }));
@@ -177,7 +182,7 @@
         function computerTurn() {
             let choices = ['rock', 'paper', 'scissors']
             return choices[Math.floor(Math.random() * choices.length)]
-            
+
         }
 
 
@@ -212,15 +217,15 @@
                     result = `You Loss to a Bot!!! You: ${playerScore} vs. Bot: ${computerScore}`
                     localStorage.setItem('result', result);
                     return window.location.assign("./endGame.html");
-                    
+
                 }
             }
             console.log(playerScore, computerScore)
             document.getElementById('result').innerHTML = result
-            
 
-            
-            
+
+
+
         }
     </script>
 
