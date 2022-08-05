@@ -199,7 +199,7 @@
                 document.getElementById('playerScore').innerHTML = `You: ${playerScore}`
 
                 if (playerScore == 5) {
-                    result = `You Won the Game!!! You: ${playerScore} vs. Bot: ${computerScore}`
+                    result = `You Won the Game!!! \n You: ${playerScore} vs. Bot: ${computerScore}`
                     localStorage.setItem('result', result);
                     return window.location.assign("./endGame.html");
                 }
@@ -214,7 +214,7 @@
                 document.getElementById('computerScore').innerHTML = `Bot: ${computerScore}`
 
                 if (computerScore == 5) {
-                    result = `You Loss to a Bot!!! You: ${playerScore} vs. Bot: ${computerScore}`
+                    result = `You Loss to a Bot!!! \n You: ${playerScore} vs. Bot: ${computerScore}`
                     localStorage.setItem('result', result);
                     return window.location.assign("./endGame.html");
 
