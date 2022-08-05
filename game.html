@@ -22,6 +22,7 @@
         }
 
         .Green3D {
+            border-color: #000000;
             background: #000000;
             background-image: -webkit-linear-gradient(top, #000000, #2871d1);
             background-image: -moz-linear-gradient(top, #000000, #2871d1);
@@ -33,7 +34,7 @@
             border-radius: 20px;
             height: 0;
             line-height: 0;
-            color: white;
+            color: rgb(0, 0, 0);
             font-family: 'Mochiy Pop One', sans-serif;
             width: 200px;
             font-size: 21px;
@@ -98,8 +99,111 @@
         .offcanvas-title {
             padding-left: 25%;
         }
-        .hud{
+
+        .hud {
             font-size: 1rem;
+        }
+
+        .btn-image {
+            background-color: #ffffff00;
+            background-image: url('./cave-painting.png') !important;
+            border-color: #000000;
+            background-size: cover; //or cover
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            
+            
+        }
+        .btn-image:hover {
+            border: solid #000000 1px;
+            background-image: -webkit-linear-gradient(top, #4389e4, #004aaa);
+            background-image: -moz-linear-gradient(top, #4389e4, #004aaa);
+            background-image: -ms-linear-gradient(top, #4389e4, #004aaa);
+            background-image: -o-linear-gradient(top, #4389e4, #004aaa);
+            background-image: -webkit-gradient(to bottom, #4389e4, #004aaa);
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            border-color: #000000;
+            color: #ffffff00;
+            box-shadow: 0 0.5em 0.5em -0.4em hsl(214, 100%, 33%);
+            transform: translateY(-0.2em);
+            cursor: pointer;
+        }
+        .btn-image1:hover {
+            border: solid #000000 1px;
+            background-image: -webkit-linear-gradient(top, #4389e4, #004aaa);
+            background-image: -moz-linear-gradient(top, #4389e4, #004aaa);
+            background-image: -ms-linear-gradient(top, #4389e4, #004aaa);
+            background-image: -o-linear-gradient(top, #4389e4, #004aaa);
+            background-image: -webkit-gradient(to bottom, #4389e4, #004aaa);
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            border-color: #000000;
+            color: #ffffff00;
+            box-shadow: 0 0.5em 0.5em -0.4em hsl(214, 100%, 33%);
+            transform: translateY(-0.2em);
+            cursor: pointer;
+        }
+        .btn-image2:hover {
+            border: solid #000000 1px;
+            background-image: -webkit-linear-gradient(top, #4389e4, #004aaa);
+            background-image: -moz-linear-gradient(top, #4389e4, #004aaa);
+            background-image: -ms-linear-gradient(top, #4389e4, #004aaa);
+            background-image: -o-linear-gradient(top, #4389e4, #004aaa);
+            background-image: -webkit-gradient(to bottom, #4389e4, #004aaa);
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            border-color: #000000;
+            color: #ffffff00;
+            box-shadow: 0 0.5em 0.5em -0.4em hsl(214, 100%, 33%);
+            transform: translateY(-0.2em);
+            cursor: pointer;
+        }
+        .btn-image1 {
+            background-color: #a5a4a400;
+            border-color: #000000;
+            background-image: url('./paper.png') !important;
+            background-size: cover; //or cover
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+        }
+        .btn-image2 {
+            background-color: #a5a4a400;
+            background-image: url('./scissors.png') !important;
+            background-size: cover; //or cover
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            border: 1px solid;
+            
+            
+        }
+        button{
+            color: #ffffff00;
+        }
+        button:hover{
+            cursor: pointer;
+            color: #ffffff00;
+        }
+        body > div > div.col > button.choiceBtn.btn-image{
+            width: 100px;
+            height: 100px;
+        }
+        body > div > div.col > button.choiceBtn.btn-image1{
+            width: 100px;
+            height: 100px;
+        }
+        body > div > div.col > button.choiceBtn.btn-image2{
+            width: 100px;
+            height: 100px;
         }
     </style>
 </head>
@@ -141,9 +245,9 @@
 <body class="text-center">
     <div class="h1 container main mb-3">First to 5 Wins!!!
         <div class="row pt-4 hud">
-        <h3 class="pt-2 col" id="playerScore">You: 0</h3>
-        <h4 class="col" id="computerScore">Bot: 0</h4>
-    </div>
+            <h3 class="pt-2 col" id="playerScore">You: 0</h3>
+            <h4 class="col" id="computerScore">Bot: 0</h4>
+        </div>
         <h1 class="gameText pt-2 pb-2" id="playerText">
             You:
         </h1>
@@ -153,9 +257,10 @@
         <h2 class="gameText pb-4" id="result"></h2>
 
         <div class="col">
-            <button class="choiceBtn Green3D" value="rock">rock</button>
-            <button class="choiceBtn Green3D" value="paper">paper</button>
-            <button class="choiceBtn Green3D" value="scissors">scissors</button>
+         
+            <button type="button" class="choiceBtn border border-round btn-image" value="rock" mdbBtn mdbWavesEffect>rock</button>
+            <button type="button" class="choiceBtn border border-round btn-image1" value="paper" mdbBtn mdbWavesEffect>paper</button>
+            <button type="button" class="choiceBtn border border-round btn-image2" value="scissors" mdbBtn mdbWavesEffect>scissors</button>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
@@ -217,7 +322,7 @@
                 document.getElementById('computerScore').innerHTML = `Bot: ${computerScore}`
 
                 if (computerScore == 5) {
-                    result = `You Were Bodied By the Bot!!! \n Bot: ${computerScore }\n You: ${playerScore}`
+                    result = `You Were Bodied By the Bot!!! \n Bot: ${computerScore}\n You: ${playerScore}`
                     localStorage.setItem('result', result);
                     return window.location.assign("./endGame.html");
 
