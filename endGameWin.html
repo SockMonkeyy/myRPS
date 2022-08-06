@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="confetti.js">
     <style>
         .navPad {
             margin: 0 auto;
@@ -175,6 +176,10 @@
 
 <body>
 
+    <p></p>
+    <!-- Here link the script file which you downloaded from the above link -->
+    <script src="confetti.js"></script>
+
     </div>
     <div id="end" class="container-final text-center">
         <div>
@@ -193,7 +198,24 @@
     </div>
     </div>
     <script>
-        
+        const start = () => {
+            setTimeout(function () {
+                confetti.start()
+            }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+        };
+
+        //  for stopping the confetti 
+
+        const stop = () => {
+            setTimeout(function () {
+                confetti.stop()
+            }, 5000);
+            // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+        };
+        // after this here we are calling both the function so it works
+        start();
+        stop();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
