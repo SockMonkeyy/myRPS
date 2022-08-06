@@ -307,7 +307,7 @@
                 document.getElementById('playerScore').innerHTML = `You: ${playerScore}`
 
                 if (playerScore == 5) {
-                    result = `Congrats!!! \n Bot Destoryed!!! \n You Won the Game!!! \n You: ${playerScore} \n Bot: ${computerScore}`
+                    result = `Congrats!!! \n Bot Destoryed!!! \n You: ${playerScore} \n Bot: ${computerScore}`
                     localStorage.setItem('result', result);
                     return window.location.assign("./endGameWin.html");
                 }
