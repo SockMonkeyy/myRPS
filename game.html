@@ -322,7 +322,7 @@
                 document.getElementById('computerScore').innerHTML = `Bot: ${computerScore}`
 
                 if (computerScore == 5) {
-                    result = `You Were Bodied \n By the Bot!!! \n \n Bot: ${computerScore}\n You: ${playerScore}`
+                    result = `You Lose!!! \n Better Luck \n Next Time!!! \n \n Bot: ${computerScore}\n You: ${playerScore}`
                     localStorage.setItem('result', result);
                     return window.location.assign("./endGame.html");
 
